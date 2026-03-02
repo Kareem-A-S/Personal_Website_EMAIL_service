@@ -25,6 +25,8 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => res.send('Email Service is running.'));
+app.get('/api/contact', (req, res) => res.send('Contact API is live. Send a POST request to this endpoint.'));
 app.use('/api/contact', contactRoute);
 
 // Start Server
